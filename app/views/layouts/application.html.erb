@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MA Piscinas</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': true %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">MA Piscinas</a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+          
+            <button class="navbar-toggler d-md-none text-white text-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <li class="nav-item">
+              <a class="nav-link" href="/#about">Sobre nós</a>
+            </li>
+            <%# <li class="nav-item">
+              <a class="nav-link" href="/#equipments">Equipamentos</a>
+            </li> %>
+            <li class="nav-item">
+              <a class="nav-link" href="/#contact">Pedir orçamento</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/portfolio">Portfólio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contactos</a>
+            </li>
+            <%# <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown link
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li> %>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <%= yield %>
+    <footer class="bg-dark text-white text-center py-3" id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-4 mt-3 text-start">
+            <h5>Navegação</h5>
+            <a href="/#about" class="text-decoration-none text-white">Sobre nós</a><br>
+            <a href="/#contact" class="text-decoration-none text-white">Pedir orçamento</a><br>
+            <a href="/portfolio" class="text-decoration-none text-white">Portfólio</a>
+          </div>
+          <div class="col-12 col-md-4 mt-3">
+            <h5>Fala connosco</h5>
+            <span>Telefone: 9999999</span><br>
+            <span>Email: 9999999</span>
+          </div>
+          <div class="col-12 col-md-4 mt-3 text-end">
+            <h5>Segue-nos</h5>
+            <span>Instagram: </span><br>
+            <span>Facebook: </span>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <p>&copy; 2023 Construção de Piscinas. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

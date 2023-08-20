@@ -1,0 +1,37 @@
+<div class="box-header with-border">
+  <h3 class="box-title">User</h3>
+</div>
+<div class="box box-default">
+  <% if @user.new_record? %>
+    <form action="<%= users_path %>" method="post">
+  <% else %>
+    <form action="<%= user_path(@user.id) %>" method="post">
+    <input name="_method" type="hidden" value="patch">
+  <% end %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <div class="box-body">
+      <div class="row">
+        <div class="form-group col-sm-12 col-md-6">
+          <label>Name </label><label class="text-danger"> *</label>
+          <input required type="text" class="form-control" name="user[name]" value="<%= @user.name %>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-12 col-md-6">
+          <label>E-mail </label><label class="text-danger"> *</label>
+          <input required type="email" class="form-control" name="user[email]" value="<%= @user.email %>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-sm-12 col-md-6">
+          <label>Password </label><label class="text-danger"> <%= '*' if !@user.id.present? %></label>
+          <input <%= 'required' if !@user.id.present? %> type="password" class="form-control" name="user[password]" value="<%= @user.password %>">
+        </div>
+      </div>
+    </div>
+    <div class="box-footer">
+      <button type="submit" class="btn btn-primary btn-flat">Save</button>
+      <a href="<%= users_path %>" class="btn btn-default btn-flat">Return</a>
+    </div>
+  </form>
+</div>
