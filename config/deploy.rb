@@ -1,9 +1,9 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.1"
 
-set :application, "MA Piscinas"
+set :application, "MA-Piscinas"
 set :repo_url, "git@gitlab.com:m_marques/ma-piscinas.git"
-set :deploy_to, "/var/www/ma_piscinas/#{fetch(:stage)}"
+set :deploy_to, "/var/www/ma-piscinas/#{fetch(:stage)}"
 
 append :linked_files, "config/master.key"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "storage", "public/uploads", "public/packs", ".bundle", "node_modules"
