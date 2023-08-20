@@ -10,10 +10,9 @@ class CreateUsersTable < ActiveRecord::Migration[6.1]
     end
     create_table :contacts do |t|
       t.string :name, null: false
-      t.string :username, null: false
       t.string :email, null: false
-      t.string :password_digest, null: false
-      t.boolean :active, null: false
+      t.string :phone, null: false
+      t.text   :message, null: false
       t.timestamps
     end
   end

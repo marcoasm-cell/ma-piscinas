@@ -1,2 +1,0 @@
-class PatientNote < ApplicationRecord
-end

@@ -44,6 +44,7 @@ group :development do
   gem 'spring'
   gem "capistrano", "~> 3.10", require: false
   gem "capistrano-rails", "~> 1.6", require: false
+  gem 'capistrano3-delayed-job', '~> 1.7', require: false
 end
 
 group :test do
@@ -62,3 +63,5 @@ gem 'bootstrap', '~> 5.2.2'
 gem 'jquery-rails'
 gem "bcrypt", "~> 3.1"
 gem 'daemons'
+
+gem 'delayed_job_active_record'

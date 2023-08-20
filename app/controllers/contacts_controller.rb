@@ -16,7 +16,12 @@ class ContactsController < ApplicationController
   # Crate new contact
   def create
     @contact = Contact.new(contact_params)
-    @contact.save
+    if @contact.save
+      flash[:success] = "Pedido enviado com sucesso"
+    else
+      flash[:error] = "Ocorreu um erro tente mais tarde"
+    end
+    redirect_to root_path
   end
 
   ##
@@ -35,7 +40,7 @@ class ContactsController < ApplicationController
 
   
   def contact_params
-    params.require(:contact).permit(:test)
+    params.require(:contact).permit(:name, :email, :phone, :message)
   end
 
 end
