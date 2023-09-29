@@ -1,0 +1,11 @@
+.alert{
+  position: fixed !important;
+  top: 50px;
+  z-index: 9999;
+  right: 100px;
+  
+  .close-alert {
+    color: #fff;
+    top: -5px;
+  }
+}

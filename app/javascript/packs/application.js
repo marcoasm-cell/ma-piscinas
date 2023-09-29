@@ -7,6 +7,7 @@ import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
+import "bootstrap"
 
 Rails.start()
 Turbolinks.start()
@@ -18,6 +19,10 @@ global.$ = global.jQuery = jQuery;
 window.$ = window.jQuery = jQuery;
 
 $(document).on("turbolinks:load", function() {
+
+  $(document).on('click', '.close-alert', function(){
+    $(".close-alert").parents(".alert").remove();
+  });
   
   $(window).scroll(function() {
     var scrollTop = $(this).scrollTop();

@@ -1,6 +1,12 @@
 # ma piscinas
 
+construção
+canalização
+  - jatos no fundo e em cima, macumbas nos jatos
+aplicação de tela armada
+manutenção
 
+schemer, ralo do fundo, jatos, bocas de impulsão, tomada de aspiração
 
 ## Getting started
 

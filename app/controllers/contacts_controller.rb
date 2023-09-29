@@ -16,7 +16,9 @@ class ContactsController < ApplicationController
   # Crate new contact
   def create
     @contact = Contact.new(contact_params)
+
     if @contact.save
+      ApplicationMailer.delay.contact_mail(@contact)
       flash[:success] = "Pedido enviado com sucesso"
     else
       flash[:error] = "Ocorreu um erro tente mais tarde"
