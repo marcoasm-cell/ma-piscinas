@@ -24,18 +24,18 @@ $(document).on("turbolinks:load", function() {
     $(".close-alert").parents(".alert").remove();
   });
   
-  $(window).scroll(function() {
-    var scrollTop = $(this).scrollTop();
-    var positionTop = $('#equipments').offset().top;
+  // $(window).scroll(function() {
+  //   var scrollTop = $(this).scrollTop();
+  //   var positionTop = $('#equipments').offset().top;
   
-    $('.bg-equipments-overlay').css({
-      opacity: function() {
-        var elementHeight = $(this).height() / 2;
-        var  opacity = ((1 - (positionTop + elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
+  //   $('.bg-equipments-overlay').css({
+  //     opacity: function() {
+  //       var elementHeight = $(this).height() / 2;
+  //       var  opacity = ((1 - (positionTop + elementHeight - scrollTop) / elementHeight) * 0.8) + 0.2;
             
-        console.log(opacity);
-        return opacity;
-      }
-    });
-  });
+  //       console.log(opacity);
+  //       return opacity;
+  //     }
+  //   });
+  // });
 });
