@@ -65,3 +65,5 @@ gem "bcrypt", "~> 3.1"
 gem 'daemons'
 
 gem 'delayed_job_active_record'
+
+gem "font-awesome-sass", "~> 6.4.2"
