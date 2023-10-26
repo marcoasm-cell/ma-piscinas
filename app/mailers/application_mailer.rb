@@ -8,7 +8,7 @@ class ApplicationMailer < ActionMailer::Base
     body += "<p>Telefone: #{contact.phone}</p>"
     body += "<p>Email: #{contact.email}</p>"
     body += "<p>Mensagem: #{contact.message}</p>"
-    mail(to: "mmarques511@gmail.com", subject: 'Novo Contacto', reply_to: contact.email)do |format|
+    mail(to: "marcelo.marque.1994@outlook.pt", subject: 'Novo Contacto', reply_to: contact.email)do |format|
       format.html { render html: body.html_safe }
     end
   end
