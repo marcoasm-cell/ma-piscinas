@@ -17,11 +17,27 @@
  @import "font-awesome";
 
 .bg-primary{
-  //background-color: rgba(0, 73, 112, 0.85) !important;
   background-color: rgb(12,193,224) !important;
+}
+#contactbg{
+  &::before{
+    content: " ";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background-image: url(asset_path('pool_bg.jpg'));
+    height: 100%;
+    opacity: 0.2;
+  }
+}
+#contact{
+
 }
 .btn-primary{
   background-color: #2e54bd !important;
+  background-color: #008bd9 !important;
+  border-color: #0099f1 !important;
 }
 .navbar {
   min-height: 80px;

@@ -31,11 +31,13 @@
             <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
           </span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse pt-4" id="navbarNavDropdown">
           <ul class="navbar-nav">
           
-            <button class="navbar-toggler d-md-none text-white text-end border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler text-white border-0 text-end pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon">
+                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
+              </span>
             </button>
             <li class="nav-item">
               <a class="nav-link" href="/#portfolio">Portfólio</a>
@@ -89,7 +91,7 @@
           </div>
         </div>
         <div class="row mt-5">
-          <p>&copy; 2023 Construção de Piscinas. Todos os direitos reservados.</p>
+          <p> © <%= Time.now.year %> Construção de Piscinas. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
