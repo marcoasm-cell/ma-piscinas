@@ -1,157 +1,23 @@
-<section class="container" id="portfolio">
-  <!-- Gallery -->
-  <div class="row">
-    <div class="col-12">
-      <h1 class="text-center mt-3 mb-4">Portfólio</h1>
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section-heading">
+      <span class="section-eyebrow">Trabalhos realizados</span>
+      <h2>Portfólio</h2>
     </div>
-    <!--<div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <img
-        src="<%= asset_url('portfolio/pool_1_1.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Boat on Calm Water"
-      />
-
-      <img
-        src="<%= asset_url('portfolio/pool_1_2.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <img
-        src="<%= asset_url('portfolio/pool_1_3.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <img
-        src="<%= asset_url('portfolio/pool_1_4.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <img
-        src="<%= asset_url('portfolio/pool_1_5.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <hr class="mt-4 d-lg-none">
-    </div>
-
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <img
-        src="<%= asset_url('portfolio/pool_2_1.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Mountains in the Clouds"
-      />
-
-      <img
-        src="<%= asset_url('portfolio/pool_2_2.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Boat on Calm Water"
-      />
-
-      <img
-        src="<%= asset_url('portfolio/pool_2_3.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Boat on Calm Water"
-      />
-
-      <img
-        src="<%= asset_url('portfolio/pool_2_4.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Boat on Calm Water"
-      />
-      <hr class="mt-4 d-lg-none">
-    </div>
-    
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <img
-        src="<%= asset_url('portfolio/pool_3_1.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Boat on Calm Water"
-      />
-
-      <img
-        src="<%= asset_url('portfolio/pool_3_2.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <img
-        src="<%= asset_url('portfolio/pool_3_3.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <img
-        src="<%= asset_url('portfolio/pool_3_4.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <hr class="mt-4 d-lg-none">
-    </div>-->
-
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <img
-        src="<%= asset_url('portfolio/1.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Boat on Calm Water"
-      />
-
-      <img
-        src="<%= asset_url('portfolio/2_1.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <img
-        src="<%= asset_url('portfolio/2_2.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-    </div>
-    
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <img
-        src="<%= asset_url('portfolio/3_1.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Boat on Calm Water"
-      />
-
-      <img
-        src="<%= asset_url('portfolio/3_2.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <img
-        src="<%= asset_url('portfolio/4.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <img
-        src="<%= asset_url('portfolio/5.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-    </div>
-
-    <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-      <img
-        src="<%= asset_url('portfolio/5.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Boat on Calm Water"
-      />
-
-      <img
-        src="<%= asset_url('portfolio/6_1.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <img
-        src="<%= asset_url('portfolio/6_2.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
-      <img
-        src="<%= asset_url('portfolio/7_2.jpeg') %>"
-        class="w-100 shadow-1-strong mb-2"
-        alt="Wintry Mountain Landscape"
-      />
+    <div class="portfolio-grid">
+      <% %w[1.jpg 2_1.jpg 2_2.jpg 3_1.jpg 3_2.jpg 4.jpg 5.jpeg 6_1.jpg 6_2.jpg 7_1.jpg 7_2.jpg].each do |image| %>
+        <a class="portfolio-item" href="<%= asset_url("portfolio/#{image}") %>" target="_blank">
+          <img src="<%= asset_url("portfolio/#{image}") %>" alt="Piscina construída pela MA Piscinas" loading="lazy">
+        </a>
+      <% end %>
     </div>
   </div>
-  <!-- Gallery -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizador de imagens" aria-hidden="true">
+    <span class="lightbox-counter"></span>
+    <button type="button" class="lightbox-btn lightbox-close" aria-label="Fechar"><i class="fa-solid fa-xmark"></i></button>
+    <button type="button" class="lightbox-btn lightbox-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+    <img class="lightbox-image" alt="">
+    <button type="button" class="lightbox-btn lightbox-next" aria-label="Seguinte"><i class="fa-solid fa-chevron-right"></i></button>
+    <div class="lightbox-thumbs"></div>
+  </div>
 </section>

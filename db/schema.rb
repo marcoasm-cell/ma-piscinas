@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2023_08_20_025919) do
 
-  create_table "contacts", charset: "utf8mb4", force: :cascade do |t|
+  create_table "contacts", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
     t.string "phone", null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2023_08_20_025919) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "delayed_jobs", charset: "utf8mb4", force: :cascade do |t|
+  create_table "delayed_jobs", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "priority", default: 0, null: false
     t.integer "attempts", default: 0, null: false
     t.text "handler", null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2023_08_20_025919) do
     t.index ["priority", "run_at"], name: "delayed_jobs_priority"
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "username", null: false
     t.string "email", null: false

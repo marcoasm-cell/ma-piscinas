@@ -7,6 +7,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -23,75 +26,59 @@
         <%= msg.html_safe %>
       </div>
     <% end %>
-    <nav class="navbar navbar-expand-lg bg-primary">
+    <nav class="navbar navbar-expand-lg sticky-top site-navbar" id="site-navbar">
       <div class="container">
-        <a class="navbar-brand" href="/"><img height="50" src="<%= asset_path('logo.jpg') %>"></a>
-        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon">
-            <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
-          </span>
+        <a class="navbar-brand" href="/"><img height="48" src="<%= asset_path('logo.jpg') %>" alt="MA Piscinas"></a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Abrir menu">
+          <i class="fa-solid fa-bars"></i>
         </button>
-        <div class="collapse navbar-collapse pt-4" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-          
-            <button class="navbar-toggler text-white border-0 text-end pe-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon">
-                <i class="fa-solid fa-bars" style="color: #ffffff;"></i>
-              </span>
-            </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <button class="navbar-toggler navbar-close border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-label="Fechar menu">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <ul class="navbar-nav ms-auto align-items-lg-center">
             <li class="nav-item">
               <a class="nav-link" href="/#portfolio">Portfólio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/#about">Sobre nós</a>
             </li>
-            <%# <li class="nav-item">
-              <a class="nav-link" href="/#equipments">Equipamentos</a>
-            </li> %>
-            <li class="nav-item">
-              <a class="nav-link" href="/#contact">Pedir orçamento</a>
-            </li>
             <li class="nav-item">
               <a class="nav-link" href="#footer">Contactos</a>
             </li>
-            <%# <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown link
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li> %>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-outline-light rounded-pill px-4 nav-cta" href="/#contact">Pedir orçamento</a>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
     <%= yield %>
-    <footer class="bg-dark text-white text-center py-3" id="footer">
+    <footer class="site-footer" id="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4 mt-3 text-md-start">
+        <div class="row g-4">
+          <div class="col-12 col-md-4 text-center text-md-start">
             <h5>Navegação</h5>
-            <a href="/#portfolio" class="text-decoration-none text-white">Portfólio</a><br>
-            <a href="/#about" class="text-decoration-none text-white">Sobre nós</a><br>
-            <a href="/#contact" class="text-decoration-none text-white">Pedir orçamento</a>
+            <a href="/#portfolio">Portfólio</a>
+            <a href="/#about">Sobre nós</a>
+            <a href="/#contact">Pedir orçamento</a>
           </div>
-          <div class="col-12 col-md-4 mt-3">
+          <div class="col-12 col-md-4 text-center">
             <h5>Fala connosco</h5>
-            <span>Telefone: +351 938 645 962</span><br>
-            <span>Email: marcelo.marque1994@outlook.pt</span><br>
-            <span>Localização: Sátão, Viseu, Portugal</span>
+            <span><i class="fa-solid fa-phone"></i> +351 938 645 962</span>
+            <span><i class="fa-solid fa-envelope"></i> marcelo.marque1994@outlook.pt</span>
+            <span><i class="fa-solid fa-location-dot"></i> Sátão, Viseu, Portugal</span>
           </div>
-          <div class="col-12 col-md-4 mt-3 text-md-end">
+          <div class="col-12 col-md-4 text-center text-md-end">
             <h5>Segue-nos</h5>
-            <a target="_blank" class="text-decoration-none text-white" href="https://www.instagram.com/marceloalves9865/"><i class="fa-brands fa-instagram"></i> Instagram</a><br>
-            <a target="_blank" class="text-decoration-none text-white" href="https://www.facebook.com/profile.php?id=100013496588440"><i class="fa-brands fa-facebook"></i> Facebook</a><br>
+            <div class="social-links justify-content-center justify-content-md-end">
+              <a target="_blank" href="https://www.instagram.com/marceloalves9865/" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a target="_blank" href="https://www.facebook.com/profile.php?id=100013496588440" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
           </div>
         </div>
-        <div class="row mt-5">
-          <p> © <%= Time.now.year %> Construção de Piscinas. Todos os direitos reservados.</p>
+        <div class="footer-bottom">
+          © <%= Time.now.year %> Construção de Piscinas. Todos os direitos reservados.
         </div>
       </div>
     </footer>
